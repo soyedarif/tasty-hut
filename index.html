@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ria's Tasty Hut</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              tYellow: "#FFC107",
+              tGrey: "#100F0F",
+              tGrey1: "#403F3F",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            backgroundImage: {
+              heroPattern: ["linear-gradient(to bottom", "rgba(34,34, 34, 0.6)", "rgba(0, 0, 0, 0.6))", "url('../images/banner_1.png')",],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-poppins">
+    <header>
+      <div class="container mx-auto">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <a class="btn btn-ghost text-tGrey1 text-2xl normal-case font-bold tracking-tighter">Ria's Tasty HUT</a>
+          </div>
+
+          <div class="navbar-end">
+            <a class="btn px-10 py-4 bg-tYellow border-0 text-tGrey font-bold hover:text-white">Sign Up</a>
+          </div>
+        </div>
+      </div>
+      <div class="py-36 bg-heroPattern bg-no-repeat	bg-cover mb-28">
+        <h1 class="text-white font-bold mb-6 text-6xl text-center">
+          Taste Ria's Delicious <br />
+          <small>Home Cooked Foods</small>
+        </h1>
+        <p class="text-white text-center mb-8 text-lg">
+          There are many variations of passages of Lorem Ipsum available, but the majority have <br />
+          suffered alteration in some form, by injected humou.
+        </p>
+        <div class="form-control w-1/2 mx-auto">
+          <div class="input-group">
+            <input id="search-field" type="text" placeholder="Search…" class="input input-bordered w-full" />
+            <button id="btn-search" class="btn btn-square px-10 text-tGrey bg-tYellow border-0 hover:text-white">Search</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container mx-auto">
+        <h2 class="text-tGrey text-center text-4xl font-semibold mb-12">Your Favourite Food</h2>
+        <div id="food-container" class="grid md:grid-cols-2 gap-6 mb-20"></div>
+        <div class="flex justify-center">
+          <button id="show-all" class="btn border-0 text-tGrey text-lg font-bold bg-tYellow w-40 hover:text-white hidden">Show All</button>
+        </div>
+        <div>
+<!-- <a href="#meal-modal" class="btn">open modal</a> -->
+
+<div class="modal" id="meal-modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <div class="modal-action">
+     <a href="#" class="btn">Yay!</a>
+    </div>
+  </div>
+</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
